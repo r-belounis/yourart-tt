@@ -1,0 +1,24 @@
+{
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "ES2019",
+    "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "react": [ "./node_modules/@types/react" ],
+      "~/*": ["./app/*"]
+    },
+    // Quick fix for @/types in node_modules resolution
+    "typeRoots": [ "node_modules/@types", "src/typings"],
+    // Remix takes care of building everything in `remix build`.
+    "noEmit": true
+  }
+}
