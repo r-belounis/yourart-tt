@@ -1,6 +1,5 @@
 import { useParams } from "@remix-run/react";
-import { json } from "@remix-run/node";
-import { NavLink, useLoaderData } from "@remix-run/react";
+import { NavLink } from "@remix-run/react";
 
 interface ActiveLink {
     link: string;

@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Await, useLoaderData, useSearchParams } from "@remix-run/react";
 import { motion } from "framer-motion";
-import type { V2_MetaFunction, LoaderArgs } from "@remix-run/node";
+import type { V2_MetaFunction, LoaderArgs } from "@vercel/remix";
 
 // Components
 import { Input } from "~/components/Inputs/Input";

@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { useLoaderData, Link, Await } from "@remix-run/react";
-import { json } from "@remix-run/node";
-import type { V2_MetaFunction } from "@remix-run/node";
+import { json } from "@vercel/remix";
+import type { V2_MetaFunction } from "@vercel/remix";
 
 import { Card } from "~/components/Cards/Card";
 
