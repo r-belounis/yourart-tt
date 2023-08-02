@@ -1,6 +1,6 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useNavigation } from "@remix-run/react";
 // import { ExternalScripts } from "remix-utils";
-import type { LinksFunction } from "@remix-run/server-runtime";
+import type { LinksFunction } from "@vercel/remix";
 
 // Components
 import Breadcumbs from "~/components/Breadcumbs/breadcrumbs";

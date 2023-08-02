@@ -7,7 +7,7 @@ module.exports = {
   server: process.env.NODE_ENV === "development" ? undefined : "./server.ts",
   serverBuildPath: "api/index.js",
   // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
+  // assetsBuildDirectory: "build",
   // publicPath: "/build/",
   serverModuleFormat: "cjs",
   tailwind: true,
