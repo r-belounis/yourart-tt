@@ -18,6 +18,8 @@
     },
     // Quick fix for @/types in node_modules resolution
     "typeRoots": [ "node_modules/@types", "src/typings"],
+    // Quick fix to include jest types
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     // Remix takes care of building everything in `remix build`.
     "noEmit": true
   }

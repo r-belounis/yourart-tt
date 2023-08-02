@@ -31,15 +31,19 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export const loader = async ({ params }: LoaderArgs) => {
-    const url = await fetch(`https://storage.googleapis.com/ya-misc/interviews/front/examples/${params.artworkId}.json`);
-    const res = await url.json();
-    if (params.artworkId !== "0" && params.artworkId !== "1") {
-        throw new Response("Artist not Found", {
-            status: 404
-        });
-    };
-    if (!res) throw new Error("Error")
-    return res;
+    let result;
+    try {
+        const url = await fetch(`https://storage.googleapis.com/ya-misc/interviews/front/examples/${params.artworkId}.json`);
+        const res = await url.json();
+        return result = res;
+    } catch {
+        if (params.artworkId !== "0" && params.artworkId !== "1") {
+            throw new Response("Artist not Found", {
+                status: 404
+            });
+        };
+        if (!result) throw new Error("Error");
+    }
 };
 
 const Modal = () => {
