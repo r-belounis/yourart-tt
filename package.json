@@ -13,7 +13,8 @@
     "storybook-dev": "storybook dev -p 6006",
     "storybook-build": "storybook build",
     "typecheck": "tsc",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^1.19.1",
