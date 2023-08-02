@@ -14,7 +14,7 @@
     "storybook-build": "storybook build",
     "typecheck": "tsc",
     "test": "jest --verbose",
-    "test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'"
+    "test:ci": "jest --ci --reporters='default' --reporters='github-actions-reporter'"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^1.19.1",
