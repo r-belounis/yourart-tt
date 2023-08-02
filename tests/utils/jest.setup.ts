@@ -1,7 +1,6 @@
-
 import '@testing-library/jest-dom/extend-expect';
 import { expect } from "@jest/globals";
-import { fetch, Request, Response } from "@remix-run/web-fetch";
+import { fetch, Request, Response, Headers } from "@remix-run/web-fetch";
 import { toBeOk, toRedirect, toHaveStatus, toHaveHeader, toSetACookie } from "./jest.helpers";
 
 expect.extend({
@@ -12,8 +11,8 @@ expect.extend({
     toSetACookie,
 });
 
-// Added Response behavior not working in tests coverage
-// See : https://stackoverflow.com/questions/74497916/referenceerror-request-is-not-defined-when-testing-with-react-router-v6-4
+// Fetch API behavior not working in tests coverage
+// See : https://github.com/remix-run/react-router/blob/main/packages/router/__tests__/setup.ts
 if (!globalThis.fetch) {
   // Built-in lib.dom.d.ts expects `fetch(Request | string, ...)` but the web
   // fetch API allows a URL so @remix-run/web-fetch defines
@@ -26,4 +25,5 @@ if (!globalThis.fetch) {
   // web-std/fetch Response does not currently implement Response.error()
   // @ts-expect-error
   globalThis.Response = Response;
+  globalThis.Headers = Headers;
 }
