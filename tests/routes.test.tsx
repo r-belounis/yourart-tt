@@ -32,7 +32,6 @@ describe("Artwork page routes", () => {
         } catch (error) {
             result = error
         }
-        console.log(result)
         expect(result as Response).toHaveStatus(404);
     });
 });
