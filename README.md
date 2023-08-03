@@ -5,6 +5,11 @@ This technical test was realised with a fullstack approach, to respond to the be
 
 > Remix was the best choice in mind for developping this test, as the main goal was to reproduce a end-to-end working and pre-production page. The philosophy was set with the free to go for making this test, with the requirements in mind.
 
+###### ❗IMPORTANT❗
+`Component UI testing with Storybook is *OTA*, still doing it.`
+
+***
+
 ## Features
 
 - Fullstack framework approach, to render the product pages
